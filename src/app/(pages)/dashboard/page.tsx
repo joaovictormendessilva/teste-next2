@@ -1,88 +1,93 @@
-'use client'
-import { Box, Button, Typography } from "@mui/material";
-import Link from "next/link";
+import { Grid, Card, Typography } from "@mui/material";
 
-import { useRouter } from "next/navigation";
 
 export default function Dashboard() {
-
-  const router = useRouter();
-
-  function Navegar() {
-    router.push("/about")
-  }
-
   return (
-    <Box marginTop={11}>
-      <Typography>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        Conteúdo da Dashboard<br></br>
-        <Link href="/about">
-          Ir para About
-        </Link> <br></br>
-
-        <Button onClick={Navegar}>
-          Navegar por aqui
-        </Button>
-      </Typography>
-    </Box>
+    <Grid container spacing={5} marginTop="15px">
+      <Grid item xs={12} sm={4} lg={4}>
+        <Card sx={{ bgcolor: "gray" }}>
+          <Typography variant="h6">
+            Conteúdo
+          </Typography>
+        </Card>
+      </Grid>
+      <Grid item xs={12} sm={4} lg={12}>
+        <Card sx={{ bgcolor: "gray" }}>
+          <Typography variant="h6">
+            Conteúdo
+          </Typography>
+        </Card>
+      </Grid>
+      <Grid item xs={12} sm={12}>
+        <Card sx={{ bgcolor: "gray" }}>
+          <Typography variant="h6">
+            Conteúdo
+          </Typography>
+        </Card>
+      </Grid>
+      <Grid item xs={12} sm={12}>
+        <Card sx={{ bgcolor: "gray" }}>
+          <Typography variant="h6">
+            Conteúdo
+          </Typography>
+        </Card>
+      </Grid>
+      <Grid item xs={12} sm={12}>
+        <Card sx={{ bgcolor: "gray" }}>
+          <Typography variant="h6">
+            Conteúdo
+          </Typography>
+        </Card>
+      </Grid>
+      <Grid item xs={12} sm={12}>
+        <Card sx={{ bgcolor: "gray" }}>
+          <Typography variant="h6">
+            Conteúdo
+          </Typography>
+        </Card>
+      </Grid>
+      <Grid item xs={12} sm={12}>
+        <Card sx={{ bgcolor: "gray" }}>
+          <Typography variant="h6">
+            Conteúdo
+          </Typography>
+        </Card>
+      </Grid>
+      <Grid item xs={12} sm={12}>
+        <Card sx={{ bgcolor: "gray" }}>
+          <Typography variant="h6">
+            Conteúdo
+          </Typography>
+        </Card>
+      </Grid>
+      <Grid item xs={12} sm={12}>
+        <Card sx={{ bgcolor: "gray" }}>
+          <Typography variant="h6">
+            Conteúdo
+          </Typography>
+        </Card>
+      </Grid>
+      <Grid item xs={12} sm={12}>
+        <Card sx={{ bgcolor: "gray" }}>
+          <Typography variant="h6">
+            Conteúdo
+          </Typography>
+        </Card>
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <Card sx={{ bgcolor: "gray" }}>
+          <Typography variant="h6">
+            Conteúdos
+          </Typography>
+        </Card>
+      </Grid>
+      <Grid item xs={12} sm={12}>
+        <Card sx={{ bgcolor: "gray" }}>
+          <Typography variant="h6">
+            Conteúdos
+          </Typography>
+        </Card>
+      </Grid>
+    </Grid>
   )
 }

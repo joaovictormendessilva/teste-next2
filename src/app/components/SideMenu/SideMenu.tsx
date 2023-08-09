@@ -291,7 +291,7 @@ export function SideMenu({ children }: ISideMenuProps) {
 
 
       {/* Conteúdo da página que vem como children */}
-      <Box height="100%" paddingLeft="24px" flex={1} position="relative">
+      <Box height="100%" flex={1} position="relative">
         {/* Drawer Teste */}
         <Drawer variant="permanent"
           PaperProps={{
@@ -384,7 +384,7 @@ export function SideMenu({ children }: ISideMenuProps) {
         {/* End - Drawer Teste */}
 
         {/* <Box height="100vh" display="flex" width="100%" overflow="auto" flex={1}> */}
-        <Box overflow="auto" height="100%" flex={1} >
+        <Box overflow="auto" height="100%" flex={1} paddingX="24px">
           {children}
         </Box>
 
