@@ -158,7 +158,7 @@ export function SideMenu({ children }: ISideMenuProps) {
   }
 
   return (
-    <Box minHeight="100vh" display="flex" width="100%" sx={{ bgcolor: "#dddddd" }}>
+    <Box display="flex" width="100%" height="100vh" overflow="hidden" sx={{ bgcolor: "#dddddd" }}>
 
       {/* Appbar superior */}
       <AppBar sx={{ backgroundColor: "white", borderRadius: "0 0 0 20px", height: "50px", display: "flex", justifyContent: "center" }} elevation={0}>
@@ -291,7 +291,7 @@ export function SideMenu({ children }: ISideMenuProps) {
 
 
       {/* Conteúdo da página que vem como children */}
-      <Box marginTop={11} width="100%" paddingX="24px" position="relative">
+      <Box height="100%" paddingLeft="24px" flex={1} position="relative">
         {/* Drawer Teste */}
         <Drawer variant="permanent"
           PaperProps={{
@@ -300,7 +300,7 @@ export function SideMenu({ children }: ISideMenuProps) {
               width: openSubDrawer ? "220px" : "0px",
               transition: "width 0.3s ease-in-out",
               backgroundColor: "white",
-              marginTop: -11,
+              // marginTop: -30,
               zIndex: 1,
               height: "-webkit-fill-available",
               overflow: "hidden"
@@ -383,7 +383,10 @@ export function SideMenu({ children }: ISideMenuProps) {
         </Drawer>
         {/* End - Drawer Teste */}
 
-        {children}
+        {/* <Box height="100vh" display="flex" width="100%" overflow="auto" flex={1}> */}
+        <Box overflow="auto" height="100%" flex={1} >
+          {children}
+        </Box>
 
       </Box>
       {/* End - Conteúdo da página que vem como children */}

@@ -18,12 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={inter.className} style={{ padding: 0, margin: 0, boxSizing: "border-box" }}>
-        <Box bgcolor="#dddddd" minHeight="100vh">
-          <SideMenu>
-            {children}
-          </SideMenu>
-        </Box>
+      <body className={inter.className} style={{ padding: 0, margin: 0, boxSizing: "border-box", overflow: "hidden" }}>
+        <SideMenu>
+          {children}
+        </SideMenu>
       </body>
     </html>
   )
