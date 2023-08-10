@@ -176,10 +176,13 @@ export function SideMenu({ children }: ISideMenuProps) {
           </Tooltip>
           <Divider orientation="vertical" flexItem sx={{ borderRight: 1, height: "20px", margin: "auto 5px", color: "#bdbdbd" }} />
           <Tooltip title="Unidade: SINQIA MOTORS">
-            <Typography variant="h6" noWrap component="div" fontSize={14} flexGrow={1} color="#000000de">
+            <Typography variant="h6" noWrap component="div" fontSize={14} color="#000000de">
               Unidade: SINQIA MOTORS
             </Typography>
           </Tooltip>
+          <Box flexGrow={1}>
+
+          </Box>
 
           <Box component="div" overflow="visible">
             <ProfileMenu />

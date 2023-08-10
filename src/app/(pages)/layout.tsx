@@ -17,12 +17,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-br">
-      <body className={inter.className} style={{ padding: 0, margin: 0, boxSizing: "border-box", overflow: "hidden" }}>
-        <SideMenu>
+    <Box>
+      <SideMenu>
+        <Box marginTop="65px">
           {children}
-        </SideMenu>
-      </body>
-    </html>
+        </Box>
+      </SideMenu>
+    </Box>
   )
 }
