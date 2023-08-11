@@ -2,7 +2,7 @@ import { Box } from '@mui/material'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
-import { SideMenu } from '../components/SideMenu/SideMenu'
+import { SideMenu } from '../../components/SideMenu/SideMenu'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <Box>
       <SideMenu>
-        <Box marginTop="65px">
+        <Box marginTop="65px" marginBottom="10px">
           {children}
         </Box>
       </SideMenu>

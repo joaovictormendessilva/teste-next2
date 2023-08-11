@@ -158,7 +158,7 @@ export function SideMenu({ children }: ISideMenuProps) {
   }
 
   return (
-    <Box display="flex" width="100%" height="100vh" overflow="hidden" sx={{ bgcolor: "#dddddd" }}>
+    <Box display="flex" width="100%" height="100vh" overflow="hidden" sx={{ bgcolor: "#eaf1f5" }}>
 
       {/* Appbar superior */}
       <AppBar sx={{ backgroundColor: "white", borderRadius: "0 0 0 20px", height: "50px", display: "flex", justifyContent: "center" }} elevation={0}>
@@ -357,7 +357,7 @@ export function SideMenu({ children }: ISideMenuProps) {
             {dataMenus.map((menu) => (
               <ListItem key={menu.cd_menu} disablePadding sx={{ display: 'block' }}>
                 <ListItemButton
-                  // href="https://google.com"
+                  href={`dashboard/${menu.cd_menu}`}
                   sx={{
                     minHeight: 48,
                     justifyContent: openDrawer ? 'initial' : 'center',
