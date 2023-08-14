@@ -357,7 +357,7 @@ export function SideMenu({ children }: ISideMenuProps) {
             {dataMenus.map((menu) => (
               <ListItem key={menu.cd_menu} disablePadding sx={{ display: 'block' }}>
                 <ListItemButton
-                  href={`dashboard/${menu.cd_menu}`}
+                  href={`../dashboard/${menu.cd_menu}`}
                   sx={{
                     minHeight: 48,
                     justifyContent: openDrawer ? 'initial' : 'center',
