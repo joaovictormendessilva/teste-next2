@@ -158,10 +158,10 @@ export function SideMenu({ children }: ISideMenuProps) {
   }
 
   return (
-    <Box display="flex" width="100%" height="100vh" overflow="hidden" sx={{ bgcolor: "#eaf1f5" }}>
+    <Box display="flex" width="100%" minHeight="100vh" overflow="hidden" sx={{ bgcolor: "#eaf1f5" }}>
 
       {/* Appbar superior */}
-      <AppBar sx={{ backgroundColor: "white", borderRadius: "0 0 0 20px", height: "50px", display: "flex", justifyContent: "center" }} elevation={0}>
+      <AppBar sx={{ backgroundColor: "white", borderRadius: "0 0 0 20px", height: "50px", display: "flex", justifyContent: "center", zIndex: 9999 }} elevation={0}>
         <Toolbar>
           <Tooltip title="Newcon - Admnistração de Grupos" >
             <Typography variant="h6" noWrap component="div" fontSize={14} color="#000000de">

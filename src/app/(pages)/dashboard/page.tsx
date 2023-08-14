@@ -8,7 +8,7 @@ export default function Dashboard() {
         <Grid item xs={12} sm={4} lg={4}>
           <Card sx={{ bgcolor: "gray" }}>
             <Typography variant="h6">
-              Conteúdo
+              Conteúdo 1
             </Typography>
           </Card>
         </Grid>
@@ -85,7 +85,7 @@ export default function Dashboard() {
         <Grid item xs={12} sm={12}>
           <Card sx={{ bgcolor: "gray" }}>
             <Typography variant="h6">
-              Conteúdos
+              Conteúdos x
             </Typography>
           </Card>
         </Grid>
