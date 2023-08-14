@@ -158,7 +158,7 @@ export function SideMenu({ children }: ISideMenuProps) {
   }
 
   return (
-    <Box display="flex" width="100%" minHeight="100vh" overflow="hidden" sx={{ bgcolor: "#eaf1f5" }}>
+    <Box display="flex" width="100%" height="100vh" overflow="hidden" sx={{ bgcolor: "#eaf1f5" }}>
 
       {/* Appbar superior */}
       <AppBar sx={{ backgroundColor: "white", borderRadius: "0 0 0 20px", height: "50px", display: "flex", justifyContent: "center", zIndex: 9999 }} elevation={0}>
@@ -193,9 +193,9 @@ export function SideMenu({ children }: ISideMenuProps) {
       </AppBar>
       {/* End - Appbar superior */}
 
-      <Drawer variant="permanent" PaperProps={{ sx: { position: "sticky", width: openDrawer ? "145px" : "65px", transition: "width 0.3s ease-in-out", backgroundColor: theme.palette.primary.main, overflow: "hidden" } }}>
+      <Drawer variant="permanent" PaperProps={{ sx: { position: "relative", width: openDrawer ? "145px" : "65px", transition: "width 0.3s ease-in-out", backgroundColor: theme.palette.primary.main, overflow: "hidden" } }}>
         {/* Botão que alterna o tamanho do drawer */}
-        <List>
+        <List >
           <ListItem disablePadding sx={{ display: 'block', marginTop: 8 }}>
             <IconButton
               color="inherit"
@@ -215,7 +215,7 @@ export function SideMenu({ children }: ISideMenuProps) {
         {/* End - Botão que alterna o tamanho do drawer */}
 
         {/* Menus do Drawer */}
-        <List sx={{ marginTop: "-20px" }}>
+        <List >
           <ListItem disablePadding sx={{ display: 'block' }}>
             <ListItemButton
               // href="https://google.com"
