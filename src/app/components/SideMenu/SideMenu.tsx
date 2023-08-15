@@ -215,7 +215,7 @@ export function SideMenu({ children }: ISideMenuProps) {
         {/* End - Botão que alterna o tamanho do drawer */}
 
         {/* Menus do Drawer */}
-        <List sx={{ position: "fixed", top: "110px" }}>
+        <List sx={{ position: "inherit", marginTop: "100px" }}>
           <ListItem disablePadding sx={{ display: 'block' }}>
             <ListItemButton
               // href="https://google.com"
