@@ -197,101 +197,99 @@ export function SideMenu({ children }: ISideMenuProps) {
 
       <Drawer variant="permanent" PaperProps={{ sx: { position: "inherit", width: openDrawer ? "145px" : "65px", transition: "width 0.3s ease-in-out", backgroundColor: theme.palette.primary.main, overflow: "hidden" } }}>
         {/* Botão que alterna o tamanho do drawer */}
-        <Box sx={{ position: "sticky" }}>
-          <List>
-            <ListItem disablePadding sx={{ display: 'block', marginTop: 8 }}>
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                onClick={openDrawer ? handleDrawerClose : handleDrawerOpen}
+        <List>
+          <ListItem disablePadding sx={{ display: 'block', marginTop: 8 }}>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={openDrawer ? handleDrawerClose : handleDrawerOpen}
+              sx={{
+                minHeight: 48,
+                justifyContent: openDrawer ? 'initial' : 'center',
+                px: 2.5,
+                color: "white"
+              }}
+            >
+              <MenuIcon />
+            </IconButton>
+          </ListItem>
+        </List>
+        {/* End - Botão que alterna o tamanho do drawer */}
+
+        {/* Menus do Drawer */}
+        <List sx={{ marginTop: "-20px" }}>
+          <ListItem disablePadding sx={{ display: 'block' }}>
+            <ListItemButton
+              // href="https://google.com"
+              onClick={() => openSubDrawer ? handleSubDrawerClose() : handleSubDrawerOpen("Consultas")}
+              sx={{
+                minHeight: 48,
+                justifyContent: openDrawer ? 'initial' : 'center',
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
                 sx={{
-                  minHeight: 48,
-                  justifyContent: openDrawer ? 'initial' : 'center',
-                  px: 2.5,
+                  minWidth: 0,
+                  mr: openDrawer ? 1 : 'auto',
+                  justifyContent: 'center',
                   color: "white"
                 }}
               >
-                <MenuIcon />
-              </IconButton>
-            </ListItem>
-          </List>
-          {/* End - Botão que alterna o tamanho do drawer */}
+                <InboxIcon />
+              </ListItemIcon>
+              <ListItemText primary="Home" sx={{ display: openDrawer ? "block" : "none", textWrap: 'nowrap', color: "white" }} primaryTypographyProps={{ fontSize: "14px" }} />
+            </ListItemButton>
+          </ListItem>
 
-          {/* Menus do Drawer */}
-          <List sx={{ marginTop: "-20px" }}>
-            <ListItem disablePadding sx={{ display: 'block' }}>
-              <ListItemButton
-                // href="https://google.com"
-                onClick={() => openSubDrawer ? handleSubDrawerClose() : handleSubDrawerOpen("Consultas")}
+          <ListItem disablePadding sx={{ display: 'block' }}>
+            <ListItemButton
+              // href="https://google.com"
+              onClick={() => openSubDrawer ? handleSubDrawerClose() : handleSubDrawerOpen("Serviços")}
+              sx={{
+                minHeight: 48,
+                justifyContent: openDrawer ? 'initial' : 'center',
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
                 sx={{
-                  minHeight: 48,
-                  justifyContent: openDrawer ? 'initial' : 'center',
-                  px: 2.5,
+                  minWidth: 0,
+                  mr: openDrawer ? 1 : 'auto',
+                  justifyContent: 'center',
+                  color: "white"
                 }}
               >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: openDrawer ? 1 : 'auto',
-                    justifyContent: 'center',
-                    color: "white"
-                  }}
-                >
-                  <InboxIcon />
-                </ListItemIcon>
-                <ListItemText primary="Home" sx={{ display: openDrawer ? "block" : "none", textWrap: 'nowrap', color: "white" }} primaryTypographyProps={{ fontSize: "14px" }} />
-              </ListItemButton>
-            </ListItem>
+                <InboxIcon />
+              </ListItemIcon>
+              <ListItemText primary="Consultas" sx={{ display: openDrawer ? "block" : "none", textWrap: 'nowrap', color: "white" }} primaryTypographyProps={{ fontSize: "14px" }} />
+            </ListItemButton>
+          </ListItem>
 
-            <ListItem disablePadding sx={{ display: 'block' }}>
-              <ListItemButton
-                // href="https://google.com"
-                onClick={() => openSubDrawer ? handleSubDrawerClose() : handleSubDrawerOpen("Serviços")}
+          <ListItem disablePadding sx={{ display: 'block' }}>
+            <ListItemButton
+              // href="https://google.com"
+              onClick={() => openSubDrawer ? handleSubDrawerClose() : handleSubDrawerOpen("Consorciado")}
+              sx={{
+                minHeight: 48,
+                justifyContent: openDrawer ? 'initial' : 'center',
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
                 sx={{
-                  minHeight: 48,
-                  justifyContent: openDrawer ? 'initial' : 'center',
-                  px: 2.5,
+                  minWidth: 0,
+                  mr: openDrawer ? 1 : 'auto',
+                  justifyContent: 'center',
+                  color: "white"
                 }}
               >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: openDrawer ? 1 : 'auto',
-                    justifyContent: 'center',
-                    color: "white"
-                  }}
-                >
-                  <InboxIcon />
-                </ListItemIcon>
-                <ListItemText primary="Consultas" sx={{ display: openDrawer ? "block" : "none", textWrap: 'nowrap', color: "white" }} primaryTypographyProps={{ fontSize: "14px" }} />
-              </ListItemButton>
-            </ListItem>
-
-            <ListItem disablePadding sx={{ display: 'block' }}>
-              <ListItemButton
-                // href="https://google.com"
-                onClick={() => openSubDrawer ? handleSubDrawerClose() : handleSubDrawerOpen("Consorciado")}
-                sx={{
-                  minHeight: 48,
-                  justifyContent: openDrawer ? 'initial' : 'center',
-                  px: 2.5,
-                }}
-              >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: openDrawer ? 1 : 'auto',
-                    justifyContent: 'center',
-                    color: "white"
-                  }}
-                >
-                  <InboxIcon />
-                </ListItemIcon>
-                <ListItemText primary="Consorciado" sx={{ display: openDrawer ? "block" : "none", textWrap: 'nowrap', color: "white" }} primaryTypographyProps={{ fontSize: "14px" }} />
-              </ListItemButton>
-            </ListItem>
-          </List>
-        </Box>
+                <InboxIcon />
+              </ListItemIcon>
+              <ListItemText primary="Consorciado" sx={{ display: openDrawer ? "block" : "none", textWrap: 'nowrap', color: "white" }} primaryTypographyProps={{ fontSize: "14px" }} />
+            </ListItemButton>
+          </ListItem>
+        </List>
         {/* End - Menus do Drawer */}
       </Drawer>
 
@@ -391,7 +389,8 @@ export function SideMenu({ children }: ISideMenuProps) {
         {/* End - Drawer Teste */}
 
         {/* <Box height="100vh" display="flex" width="100%" overflow="auto" flex={1}> */}
-        <Box overflow="auto" height="100%" flex={1} paddingX={smDown ? "16px" : "24px"} paddingBottom="10px">
+        {/* <Box overflow="auto" height="100%" flex={1} paddingX={smDown ? "16px" : "24px"} paddingBottom="10px"> */}
+        <Box overflow="auto" height="100%" paddingX={smDown ? "16px" : "24px"} paddingBottom="10px">
           {children}
         </Box>
 
