@@ -197,7 +197,7 @@ export function SideMenu({ children }: ISideMenuProps) {
 
       <Drawer variant="permanent" PaperProps={{ sx: { position: "inherit", width: openDrawer ? "145px" : "65px", transition: "width 0.3s ease-in-out", backgroundColor: theme.palette.primary.main, overflow: "hidden" } }}>
         {/* Botão que alterna o tamanho do drawer */}
-        <Box sx={{ position: "fixed" }}>
+        <Box sx={{ position: "sticky" }}>
           <List>
             <ListItem disablePadding sx={{ display: 'block', marginTop: 8 }}>
               <IconButton
