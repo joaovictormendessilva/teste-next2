@@ -21,6 +21,9 @@ export default function RootLayout({
       <SideMenu>
         <Box marginTop="65px" marginBottom="10px">
           {children}
+          {children}
+          {children}
+          {children}
         </Box>
       </SideMenu>
     </Box>
