@@ -193,7 +193,7 @@ export function SideMenu({ children }: ISideMenuProps) {
       </AppBar>
       {/* End - Appbar superior */}
 
-      <Drawer variant="permanent" PaperProps={{ sx: { position: "relative", width: openDrawer ? "145px" : "65px", transition: "width 0.3s ease-in-out", backgroundColor: theme.palette.primary.main, overflow: "hidden" } }}>
+      <Drawer variant="permanent" PaperProps={{ sx: { position: "inherit", width: openDrawer ? "145px" : "65px", transition: "width 0.3s ease-in-out", backgroundColor: theme.palette.primary.main, overflow: "hidden" } }}>
         {/* Botão que alterna o tamanho do drawer */}
         <List >
           <ListItem disablePadding sx={{ display: 'block', marginTop: 8, position: "fixed" }}>
@@ -215,7 +215,7 @@ export function SideMenu({ children }: ISideMenuProps) {
         {/* End - Botão que alterna o tamanho do drawer */}
 
         {/* Menus do Drawer */}
-        <List sx={{ position: "fixed", marginTop: "110px" }}>
+        <List sx={{ position: "fixed", top: "110px" }}>
           <ListItem disablePadding sx={{ display: 'block' }}>
             <ListItemButton
               // href="https://google.com"
