@@ -14,7 +14,7 @@ import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import Tooltip from '@mui/material/Tooltip';
 
-import { Card, Grid, useTheme } from "@mui/material";
+import { Card, Grid, useMediaQuery, useTheme } from "@mui/material";
 
 import MenuIcon from '@mui/icons-material/Menu';
 import InboxIcon from '@mui/icons-material/Inbox';
@@ -38,6 +38,8 @@ interface IDataMenusProps {
 
 export function SideMenu({ children }: ISideMenuProps) {
   const theme = useTheme();
+  const smDown = useMediaQuery(theme.breakpoints!.down('sm'));
+
   const [openDrawer, setOpenDrawer] = useState(false);
   const [openSubDrawer, setOpenSubDrawer] = useState(false);
   const [dataMenus, setDataMenus] = useState<IDataMenusProps[]>([]);
@@ -195,8 +197,8 @@ export function SideMenu({ children }: ISideMenuProps) {
 
       <Drawer variant="permanent" PaperProps={{ sx: { position: "inherit", width: openDrawer ? "145px" : "65px", transition: "width 0.3s ease-in-out", backgroundColor: theme.palette.primary.main, overflow: "hidden" } }}>
         {/* Botão que alterna o tamanho do drawer */}
-        <List sx={{ position: "fixed" }}>
-          <ListItem disablePadding sx={{ display: 'block', marginTop: 8, position: "fixed" }}>
+        <List sx={{ position: smDown ? "fixed" : "inherit", paddingTop: 0 }}>
+          <ListItem disablePadding sx={{ display: 'block', marginTop: 8 }}>
             <IconButton
               color="inherit"
               aria-label="open drawer"
@@ -215,7 +217,8 @@ export function SideMenu({ children }: ISideMenuProps) {
         {/* End - Botão que alterna o tamanho do drawer */}
 
         {/* Menus do Drawer */}
-        <List sx={{ position: "fixed", top: "100px" }}>
+
+        <List sx={{ position: smDown ? "fixed" : "inherit", marginTop: smDown ? "108px" : "-20px" }}>
           <ListItem disablePadding sx={{ display: 'block' }}>
             <ListItemButton
               // href="https://google.com"
@@ -387,7 +390,7 @@ export function SideMenu({ children }: ISideMenuProps) {
         {/* End - Drawer Teste */}
 
         {/* <Box height="100vh" display="flex" width="100%" overflow="auto" flex={1}> */}
-        <Box overflow="auto" height="100%" flex={1} paddingX="24px">
+        <Box overflow="auto" height="100%" flex={1} paddingX={smDown ? "16px" : "24px"} paddingBottom="10px">
           {children}
         </Box>
 
